@@ -22,6 +22,7 @@ export const createOrUpdateUser = async (
       },
       { upsert: true, new: true }
     );
+    return user;
   } catch (error) {
     console.log(`Error: Could not create or update user:`, error);
   }
